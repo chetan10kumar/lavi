@@ -8,7 +8,8 @@ app.use(bodyParser.json());
 const personRoutes=require('./routes/personRoutes');
 app.use('/person',personRoutes)
 
-const PORT=process.env.PORT || 3000;
+
+const PORT= process.env.PORT || 3000;
 
 
 app.listen(PORT,()=>
