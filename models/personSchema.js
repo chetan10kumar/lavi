@@ -1,34 +1,36 @@
+/*Models are the the blue print of the the database*/
+/*It can also represent a collection for example-person*/
 const mongoose=require('mongoose');
-const personSchema=new mongoose.Schema({
-    name:{
+const personSchema=mongoose.Schema({
+    Name:{
         type:String,
         require:true
     },
-    age:{
+    Age:{
         type:Number,
         require:true
     },
-    mobile:{
+    Mobile:{
         type:String,
         require:true
     },
-    email:{
+    Email:{
         type:String,
         require:true
     },
-    work:{
+    Work:{
         type:String,
-        enum:["chef","manager","owner"],
+        enum:["owner","manager","chef"],
+        require:true
     },
-    address:{
+    Address:{
         type:String,
         require:true
     },
-    salary:{
-        type:String,
+    Salary:{
+        type:Number,
         require:true
     }
 })
-//comment
-const Person=new mongoose.model("Person",personSchema);
+const Person=mongoose.model("Person",personSchema);
 module.exports=Person;
