@@ -39,11 +39,11 @@ router.get('/:workType',async(req,res)=>
         {
             const response=await Person.find({work:workType})
             console.log("Person fetched successfully");
-            res.status(200).json(response);
+            return res.status(200).json(response);
         }
         else
         {
-            res.status(400).json({error:"WokType not found Error"});
+            return res.status(400).json({error:"WokType not found Error"});
         }
 
     }

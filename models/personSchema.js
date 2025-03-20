@@ -30,7 +30,17 @@ const personSchema=mongoose.Schema({
     Salary:{
         type:Number,
         require:true
+    },
+    Username:{
+        type:String,
+        require:true
+    },
+    Password:{
+        type:String,
+        require:true
     }
+    
+    
 })
 const Person=mongoose.model("Person",personSchema);
 module.exports=Person;
